@@ -7,3 +7,4 @@ bin/
 aspnet-core/src/NoteApp.Web.Host/App_Data/Logs/
 aspnet-core/src/NoteApp.Web.Mvc/App_Data/Logs/
 aspnet-core/src/NoteApp.Migrator/Logs/Logs.txt
+.DS_STORE
