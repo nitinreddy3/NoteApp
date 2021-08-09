@@ -8,8 +8,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/test.ts'],
   collectCoverage: true,
   coverageReporters: ['html'],
-  coverageDirectory: 'coverage/my-app',
-  typeRoots: ['node_modules/@types'],
+  coverageDirectory: 'coverage',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     "prefix": '<rootDir>/'
   })

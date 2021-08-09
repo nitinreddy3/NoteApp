@@ -38,8 +38,8 @@ export abstract class AppComponentBase {
         this.elementRef = injector.get(ElementRef);
     }
 
-    l(key: string, ...args: any[]): string {
-        let localizedText = this.localization.localize(key, this.localizationSourceName);
+    l(key: string, ...args: []): string {
+        let localizedText: never[] | string = this.localization.localize(key, this.localizationSourceName);
 
         if(!localizedText) {
             localizedText = key;
