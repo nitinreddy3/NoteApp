@@ -53,12 +53,10 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
+              "budgets": [ {
+                "type": "anyComponentStyle",
+                "maximumWarning": "6kb"
+              } ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -67,26 +65,20 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+              "fileReplacements": [ {
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              } ]
             },
             "hmr": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.hmr.ts"
-                }
-              ]
+              "budgets": [ {
+                "type": "anyComponentStyle",
+                "maximumWarning": "6kb"
+              } ],
+              "fileReplacements": [ {
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.hmr.ts"
+              } ]
             }
           }
         },
@@ -114,6 +106,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
+            "tsConfig": "src/tsconfig.json",
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "assets": [

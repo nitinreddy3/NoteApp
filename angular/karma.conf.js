@@ -11,12 +11,6 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    files: [
-      
-    ],
-    preprocessors: {
-      
-    },
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
@@ -25,7 +19,7 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     angularCli: {
-      config: './.angular-cli.json',
+      // config: './.angular-cli.json',
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
