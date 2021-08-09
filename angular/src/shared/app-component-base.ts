@@ -1,5 +1,5 @@
-import { Injector, ElementRef } from '@angular/core';
-import { AppConsts } from '@shared/AppConsts';
+import {Injector, ElementRef} from '@angular/core';
+import {AppConsts} from '@shared/AppConsts';
 import {
     LocalizationService,
     PermissionCheckerService,
@@ -10,7 +10,7 @@ import {
     AbpMultiTenancyService
 } from 'abp-ng2-module';
 
-import { AppSessionService } from '@shared/session/app-session.service';
+import {AppSessionService} from '@shared/session/app-session.service';
 
 export abstract class AppComponentBase {
 
@@ -41,11 +41,11 @@ export abstract class AppComponentBase {
     l(key: string, ...args: any[]): string {
         let localizedText = this.localization.localize(key, this.localizationSourceName);
 
-        if (!localizedText) {
+        if(!localizedText) {
             localizedText = key;
         }
 
-        if (!args || !args.length) {
+        if(!args || !args.length) {
             return localizedText;
         }
 

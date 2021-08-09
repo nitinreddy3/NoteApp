@@ -1,7 +1,7 @@
-import { Component, Injector, OnInit, Renderer2 } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
-import { SignalRAspNetCoreHelper } from '@shared/helpers/SignalRAspNetCoreHelper';
-import { LayoutStoreService } from '@shared/layout/layout-store.service';
+import {Component, Injector, OnInit, Renderer2} from '@angular/core';
+import {AppComponentBase} from '@shared/app-component-base';
+import {SignalRAspNetCoreHelper} from '@shared/helpers/SignalRAspNetCoreHelper';
+import {LayoutStoreService} from '@shared/layout/layout-store.service';
 
 @Component({
   templateUrl: './app.component.html'
@@ -15,6 +15,7 @@ export class AppComponent extends AppComponentBase implements OnInit {
     private _layoutStore: LayoutStoreService
   ) {
     super(injector);
+    this.sidebarExpanded = false;
   }
 
   ngOnInit(): void {
