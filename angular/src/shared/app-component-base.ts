@@ -39,7 +39,7 @@ export abstract class AppComponentBase {
     }
 
     l(key: string, ...args: []): string {
-        let localizedText: never[] | string = this.localization.localize(key, this.localizationSourceName);
+        let localizedText: any = this.localization.localize(key, this.localizationSourceName);
 
         if(!localizedText) {
             localizedText = key;

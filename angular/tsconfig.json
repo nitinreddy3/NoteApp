@@ -22,14 +22,27 @@
      "typeRoots": [
       "./node_modules/@types"
     ],
-    "types":["jest"],
     "paths": {
       "@abp/*": [ "./node_modules/abp-ng2-module/dist/src/*" ],
       "@app/*": [ "./src/app/*" ],
       "@shared/*": [ "./src/shared/*" ],
       "@node_modules/*": [ "./node_modules/*" ]
-    }
+    },
+    "esModuleInterop": true,
+    "allowJs": true,
+    "jsx": "react",
+    "rootDir": ".",
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
   },
+   "types":["jest"],
+    "exclude": [
+        "node_modules",
+        "build",
+        "jest",
+        "src/test.ts"
+    ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
